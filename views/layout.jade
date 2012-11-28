@@ -1,0 +1,25 @@
+doctype 5
+html
+	head
+		title= title
+		link(rel='stylesheet',href='/bootstrap/css/bootstrap.min.css')
+		link(rel='stylesheet',href='/stylesheets/style.css')
+		//- 自定义样式区
+		block styles
+
+	body
+	div.navbar.navbar-inverse.navbar-fixed-top
+		div.navbar-inner
+			div.container
+				a.brand(href='javascript:') AlgExecutor
+				//- 头部tab栏
+				block menus
+
+	div.container
+		//- 内容区
+		block content
+
+	script(type='text/javascript', src='/javascripts/jquery-1.7.js')
+	script(type='text/javascript', src='/bootstrap/js/bootstrap.min.js')
+	//- 自定义脚本区
+	block scripts
